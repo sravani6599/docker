@@ -1,0 +1,11 @@
+stages:
+  - build
+build-java-project:
+  only:
+    - master 
+  stage: build
+  script:
+    - mvn package
+  artifacts:
+    paths:
+      - /home/ansadmin #path to where the WAR file is stored
